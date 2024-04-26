@@ -1,6 +1,7 @@
 www
 backend/target
 frontend/target
+frontend/dist
 common/target
 target
 .idea/
