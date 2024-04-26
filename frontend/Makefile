@@ -1,10 +1,11 @@
 build:
-	@RUSTFLAGS= trunk build
+	@type -P trunk && \
+	RUSTFLAGS= trunk build || rustup target add wasm32-unknown-unknown
 
 clean:
 	@cargo clean
 
-web:
+web:build
 	@RUSTFLAGS= trunk serve
 
 docs: build
